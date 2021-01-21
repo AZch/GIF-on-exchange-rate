@@ -4,7 +4,7 @@ exchange:
     base: USD
     compare: RUB
   api:
-    key: 571488d5e4184828bc1ef9929751e42d
+    key: YOUR_APP_KEY
     urls:
       base: https://openexchangerates.org/api
       latest: /latest.json
@@ -12,7 +12,7 @@ exchange:
 gif:
   name: gif
   api:
-    key: 9QXn7scFsJBq7KbvQNK5GMYr7gsWCXk3
+    key: YOUR_API_KEY
     urls:
       base: https://api.giphy.com/v1
       rich: /gifs/random?tag=rich
