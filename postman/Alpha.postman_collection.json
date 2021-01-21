@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "3d35cf7b-a73a-46a6-bf16-def463b83a44",
+		"name": "Alpha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "Exchange",
+					"item": [
+						{
+							"name": "Latest",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{test_api}}",
+									"host": [
+										"{{test_api}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "HistoricalNow",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{test_api}}/historical",
+									"host": [
+										"{{test_api}}"
+									],
+									"path": [
+										"historical"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Service",
+					"item": [
+						{
+							"name": "Validate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{test_api}}/validate",
+									"host": [
+										"{{test_api}}"
+									],
+									"path": [
+										"validate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Gif",
+					"item": [
+						{
+							"name": "Rich",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{test_api}}/rich",
+									"host": [
+										"{{test_api}}"
+									],
+									"path": [
+										"rich"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Broke",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{test_api}}/broke",
+									"host": [
+										"{{test_api}}"
+									],
+									"path": [
+										"broke"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Validate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}",
+					"host": [
+						"{{base_url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
