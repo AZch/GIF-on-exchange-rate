@@ -4,8 +4,7 @@ import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.springframework.beans.factory.annotation.Value;
 
-public class ExchangeClientInterceptor implements RequestInterceptor {
-
+public class ExchangeClientAuthInterceptor implements RequestInterceptor {
     @Value("${exchange.api.key}")
     private String apiKey;
 
