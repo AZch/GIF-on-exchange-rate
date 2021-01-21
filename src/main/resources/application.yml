@@ -1,10 +1,14 @@
 exchange:
   name: exchange
+  currency:
+    base: USD
+    compare: RUB
   api:
     key: 571488d5e4184828bc1ef9929751e42d
     urls:
       base: https://openexchangerates.org/api
       latest: /latest.json
+      historical: /historical
 gif:
   name: gif
   api:
