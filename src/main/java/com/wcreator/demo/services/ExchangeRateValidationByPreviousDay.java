@@ -2,6 +2,7 @@ package com.wcreator.demo.services;
 
 import com.wcreator.demo.clients.exchange.ExchangeClient;
 import com.wcreator.demo.clients.exchange.dto.ExchangeResponse;
+import com.wcreator.demo.exceptions.ConflictCompareCurrency;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +23,13 @@ public class ExchangeRateValidationByPreviousDay implements ExchangeRateValidati
     @Override
     public boolean isGoodExchangeRate() {
         ExchangeResponse previousDateRate = exchangeClient.getHistoricalDateRate(this.getPreviousDate());
+        if (!previousDateRate.getRates().containsKey(compareRate)) {
+            throw new ConflictCompareCurrency(compareRate);
+        }
         ExchangeResponse latestRate = exchangeClient.getLastExchangeRate();
+        if (!latestRate.getRates().containsKey(compareRate)) {
+            throw new ConflictCompareCurrency(compareRate);
+        }
         return latestRate.getRates().get(compareRate) < previousDateRate.getRates().get(compareRate);
     }
 
