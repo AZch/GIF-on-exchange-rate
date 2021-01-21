@@ -5,3 +5,11 @@ exchange:
     urls:
       base: https://openexchangerates.org/api
       latest: /latest.json
+gif:
+  name: gif
+  api:
+    key: 9QXn7scFsJBq7KbvQNK5GMYr7gsWCXk3
+    urls:
+      base: https://api.giphy.com/v1
+      rich: /gifs/random?tag=rich
+      broke: /gifs/random?tag=broke
